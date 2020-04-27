@@ -1,0 +1,118 @@
+@import './base.scss';
+
+.home {
+	padding: 20px;
+	margin-top: 20px;
+	color: black;
+	font-size: 1rem;
+	
+}
+
+.weather-card-wrapper {
+	display: flex;
+    justify-content: center;
+}
+.search-city {
+	display: flex;
+    padding: 5px 0 10px;
+    border-bottom: solid 1px #c7c7c7;
+    .city-select {
+    	flex: 2;
+    	margin-right: 5px;
+    	max-width: 250px;
+    }
+    .search-btn {
+    	padding: 5px 7px;
+	    outline: none;
+	    border: none;
+	    border-radius: 3px;
+    }
+}
+
+.weather-card {
+	padding: 20px;
+	max-width: 370px;
+	
+	.city-header {
+		font-size: 2rem;
+	    font-weight: 500;
+	    text-transform: capitalize;
+	}
+	.weather {
+		padding: 10px 0 15px;
+
+		.weather-description {
+			text-transform: capitalize;
+		    font-size: 1.2rem;
+		    color: white;
+		    font-weight: 500;
+		}
+	}
+	.temperature-wrapper {
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	padding: 0 10px;
+    	.min {
+			color: #c7c7c7;
+		}
+    	.temperature {
+			font-size: 1.5rem;
+		}
+		
+		.degree-celcius {
+			font-size: 1.2rem;
+			font-weight: 500;
+			padding-left: 2px;
+		}
+		.degree-celcius:before {
+	    	content: "\00b0"
+		}
+	}
+	.min-max {
+		display: flex;
+    	justify-content: space-between;
+    	padding: 15px 20px;
+	}
+	.time-class {
+		font-size: 1.2rem;
+	}
+	.sun-label {
+		font-size: 1rem;
+	}
+	.forecast-list {
+		display: flex;
+	    width: 100%;
+	    overflow-x: scroll;
+	    overflow-y: hidden;
+	    
+	}
+	::-webkit-scrollbar {
+	 		-webkit-appearance: none;
+	  		width: 7px;
+	}
+	::-webkit-scrollbar-thumb {
+	  border-radius: 4px;
+	  background-color: rgba(0, 0, 0, .5);
+	  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+	}
+	.forecast-item {
+		padding: 0 2px;
+		border: solid 0.5px #c7c7c7;
+		color: white;
+	}
+	.temp-block {
+		display: flex;
+		justify-content: space-between;
+	}
+	.max {
+		color: black;
+	}
+	.temperature-small {
+		font-size: 0.9rem;
+	}
+	.temperature-small:after {
+    	content: "\00b0"
+	}
+	
+}

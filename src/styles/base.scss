@@ -1,0 +1,39 @@
+body {
+	height: 100%;
+	font-size: 16em;
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+$tablet-width: 760px;
+$desktop-width: 1080px;
+$mobile-width: 520px;
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop -1}) {
+		@content
+	}
+}
+
+@mixin mobile {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop -1}) {
+		@content
+	}
+}
+
+
+@mixin desktop {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop -1}) {
+		@content
+	}
+}
