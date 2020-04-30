@@ -1,7 +1,6 @@
 # weather-forecast
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-[Demo of project](https://veryamini.github.io/weather-forecast)
+To run on your local machine, clone the repo and follow below given directions.
 
 ## Available Scripts
 
