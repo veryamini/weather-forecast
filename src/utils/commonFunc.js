@@ -11,11 +11,11 @@ class CommonFunc {
 
 	getFormattedDate = (timestamp) => {
 		if (!this.isUndefined(timestamp)) {
-			let d = new Date(timestamp*1000);
-			console.log("d: ", d)
+			const currentDate = new Date();
+			let d = new Date((timestamp + (currentDate.getTimezoneOffset() * 60))*1000);
 			return `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}`;
 		}
-		return ''
+		return '';
 	}
 
 	searchCity = (cityString) => {
@@ -28,10 +28,12 @@ class CommonFunc {
 
 	getTime = (timestamp) => {
 		if (!this.isUndefined(timestamp)) {
-			let d = new Date(timestamp*1000);
-			return `${d.getHours()}:${d.getMinutes()}`;
+			const currentDate = new Date();
+			let d = new Date((timestamp + (currentDate.getTimezoneOffset() * 60))*1000);
+			// d = Date.UTC(d);
+			return d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
 		}
-		return ''
+		return '';
 	}
 
 	convertFarhCelcius = (temp) => {
@@ -43,10 +45,18 @@ class CommonFunc {
 
 	getDayMonth = (timestamp) => {
 		if (!this.isUndefined(timestamp)) {
-			let d = new Date(timestamp*1000);
+			const currentDate = new Date();
+			let d = new Date((timestamp + (currentDate.getTimezoneOffset() * 60))*1000);
 			return `${d.getDate()}/${d.getMonth()+1}`;
 		}
-		return ''
+		return '';
+	}
+
+	convertKelvinCelcius = (temp) => {
+		if (!this.isUndefined(temp)) {
+			return (temp - 273.15).toFixed(2);
+		}
+		return '';
 	}
 }
 

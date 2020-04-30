@@ -47,12 +47,7 @@ class WeatherHome extends Component {
 
 	handleClickSearch = () => {
 		const {city} = this.state;
-		fetchWeatherDetails(city.value).then((res) => {
-      		const cityData = {
-      			weather: res.list[0].weather[0],
-      			city: res.city,
-      			temp: res.list[0].main,
-      		};
+		fetchWeatherDetails(city.value).then((cityData) => {
       		this.setState({
       			cityData,
       		});
