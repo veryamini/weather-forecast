@@ -20,20 +20,20 @@ $desktop-width: 1080px;
 $mobile-width: 520px;
 
 @mixin tablet {
-	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop -1}) {
-		@content
-	}
+	@media (min-width: #{$tablet-width}) {
+        @content;
+    }
 }
 
 @mixin mobile {
-	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop -1}) {
-		@content
-	}
+	@media (max-width: #{$mobile-width}) {
+        @content;
+    }
 }
 
 
 @mixin desktop {
-	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop -1}) {
-		@content
-	}
+	@media (min-width: #{$desktop-width}) {
+        @content;
+    }
 }

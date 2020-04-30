@@ -31,7 +31,14 @@
 
 .weather-card {
 	padding: 20px;
-	max-width: 370px;
+	max-width: 500px;
+
+	@include mobile {
+		max-width: 80%;
+	}
+	@include tablet {
+		max-width: 80%;
+	}
 	
 	.city-header {
 		font-size: 2rem;
